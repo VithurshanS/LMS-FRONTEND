@@ -2,7 +2,7 @@ import axios from "axios";
 import { User } from "oidc-client-ts";
 
 const apiClient = axios.create({
-  baseURL: '', // Use proxy instead of direct backend URL
+  baseURL: '',
   headers: {
     'Content-Type': 'application/json',
   },
