@@ -16,7 +16,7 @@ const Login = () => {
     return(
         <div className="container">
             <h2>Login</h2>
-            <button onClick={() => auth.signinRedirect()}>Login with OIDC</button>
+            <button onClick={() => auth.signinRedirect()}>Login</button>
         </div>
     )
     

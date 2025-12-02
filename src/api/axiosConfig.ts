@@ -16,11 +16,11 @@ apiClient.interceptors.request.use((config) => {
     );
     
     if (!isPublicEndpoint) {
-        const manualToken = sessionStorage.getItem('access_token');
-        if (manualToken) {
-            config.headers.Authorization = `Bearer ${manualToken}`;
-            return config;
-        }
+        // const manualToken = sessionStorage.getItem('access_token');
+        // if (manualToken) {
+        //     config.headers.Authorization = `Bearer ${manualToken}`;
+        //     return config;
+        // }
         const sessStorage = sessionStorage.getItem(`oidc.user:http://localhost:8080/realms/ironone:lms-iam`);
         if (sessStorage) {
             const user = User.fromStorageString(sessStorage);
