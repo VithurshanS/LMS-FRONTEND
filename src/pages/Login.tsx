@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { loginUser, type LoginRequest } from "../api/authService";
 import { useAuth } from "react-oidc-context";
 
 const Login = () => {
     const auth = useAuth();
+
     if(auth.isLoading) {
         return <div>Loading...</div>;
     }
